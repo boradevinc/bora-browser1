@@ -16,12 +16,28 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v6
 
+      - name: Setup Environment
+        run: |
+          # Burada gerekli derleyicileri yüklüyoruz (Node.js/Java vb.)
+          npm install
+
       - name: Build Process
         run: |
-          echo "Bora Browser derleme islemi basliyor..."
+          echo "Bora Browser: Tum paketler derleniyor..."
           mkdir -p build_output
-          echo "Bora Browser Build v1.0" > build_output/Bora_Browser_Info.txt
           
+          # DMG, AppImage ve EXE icin build komutu (Electron kullandigini varsayiyorum)
+          npm run dist
+          
+          # Ciktilari build_output klasorune tasi
+          cp dist/*.dmg build_output/BoraBrowser_v1.0.dmg
+          cp dist/*.AppImage build_output/BoraBrowser_v1.0.AppImage
+          cp dist/*.exe build_output/BoraBrowser_v1.0.exe
+          
+          # APK icin ayri bir build (Android icin)
+          # ./gradlew assembleDebug
+          # cp app/build/outputs/apk/debug/*.apk build_output/BoraBrowser_v1.0.apk
+
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
