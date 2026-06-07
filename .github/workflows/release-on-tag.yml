@@ -1,4 +1,4 @@
-name: Build Bora Browser
+name: Build DMG
 
 on:
   push:
@@ -10,22 +10,19 @@ permissions:
 
 jobs:
   build:
-    name: Build Bora Browser
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
-      - name: Build Process
+      - name: Create DMG
         run: |
-          echo "Bora Browser: Derleme islemi basliyor..."
-          mkdir -p build_output
-          # Buraya derleme komutunu ekleyecegiz kanka
-          echo "Bora Browser v1.0 test basarili" > build_output/Bora_Browser_Info.txt
-          
-      - name: Create Release
+          mkdir -p output
+          hdiutil create -volname "BoraBrowser" -srcfolder . -ov -format UDZO output/BoraBrowser.dmg
+
+      - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: build_output/*
+          files: output/BoraBrowser.dmg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
