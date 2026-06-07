@@ -15,10 +15,18 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Build Application
+        run: |
+          # BURASI ÖNEMLİ: Kodu derleyip BoraBrowser.app klasörünü oluşturacak komutunu buraya yaz.
+          # Örn: nix-build veya make veya npm run build
+          # Şu an örnek olarak bir klasör oluşturuyorum, sen kendi komutunu yaz:
+          mkdir -p BoraBrowser.app
+          echo "App content" > BoraBrowser.app/contents.txt
+
       - name: Create DMG
         run: |
-          mkdir -p output
-          hdiutil create -volname "BoraBrowser" -srcfolder . -ov -format UDZO output/BoraBrowser.dmg
+          # Şimdi derlenmiş .app dosyasını DMG'ye çeviriyoruz
+          hdiutil create -volname "BoraBrowser" -srcfolder BoraBrowser.app -ov -format UDZO output/BoraBrowser.dmg
 
       - name: Release
         uses: softprops/action-gh-release@v1
