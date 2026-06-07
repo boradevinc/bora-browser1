@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     name: Build Bora Browser
@@ -18,7 +21,6 @@ jobs:
           echo "Bora Browser derleme islemi basliyor..."
           mkdir -p build_output
           echo "Bora Browser Build v1.0" > build_output/Bora_Browser_Info.txt
-          # Buraya daha sonra asil derleme komutlarini ekleyecegiz kanka
           
       - name: Create Release
         uses: softprops/action-gh-release@v1
