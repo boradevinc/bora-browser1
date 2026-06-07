@@ -17,20 +17,25 @@ jobs:
 
       - name: Build Application
         run: |
-          # BURASI ÖNEMLİ: Kodu derleyip BoraBrowser.app klasörünü oluşturacak komutunu buraya yaz.
-          # Örn: nix-build veya make veya npm run build
-          # Şu an örnek olarak bir klasör oluşturuyorum, sen kendi komutunu yaz:
-          mkdir -p BoraBrowser.app
-          echo "App content" > BoraBrowser.app/contents.txt
+          # ÖNEMLİ: Kendi derleme komutunu buraya yazmalısın.
+          # Eğer bir komutun yoksa, kodun derlenmiş hali (yani .app klasörü)
+          # hangi klasörde oluşuyorsa (örneğin 'dist' veya 'build') onu kullanacağız.
+          # Şimdilik örnek olarak 'build' klasörünü hedefliyorum:
+          
+          # ÖRN: npm install && npm run build
+          # mkdir -p build/BoraBrowser.app # Derlenmiş dosyanı buraya taşıman lazım
+          
+          echo "Derleme komutunu buraya eklemen lazım"
 
       - name: Create DMG
         run: |
-          # Şimdi derlenmiş .app dosyasını DMG'ye çeviriyoruz
-          hdiutil create -volname "BoraBrowser" -srcfolder BoraBrowser.app -ov -format UDZO output/BoraBrowser.dmg
+          # Burada 'build' klasörünün içinde 'BoraBrowser.app' olduğunu varsayıyorum.
+          # Kendi klasör yapına göre 'build' yazan yeri değiştir.
+          hdiutil create -volname "BoraBrowser" -srcfolder build/BoraBrowser.app -ov -format UDZO BoraBrowser.dmg
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: output/BoraBrowser.dmg
+          files: BoraBrowser.dmg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
