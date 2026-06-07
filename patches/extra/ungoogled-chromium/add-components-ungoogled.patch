@@ -1,9 +1,9 @@
-# Add ungoogled-chromium-specific code to components/ungoogled/
+# Add bora-browser-specific code to components/ungoogled/
 
 --- /dev/null
 +++ b/components/ungoogled/BUILD.gn
 @@ -0,0 +1,14 @@
-+# Copyright (c) 2020 The ungoogled-chromium Authors. All rights reserved.
++# Copyright (c) 2020 The bora-browser Authors. All rights reserved.
 +# Use of this source code is governed by a BSD-style license that can be
 +# found in the LICENSE file.
 +
@@ -20,7 +20,7 @@
 --- /dev/null
 +++ b/components/ungoogled/ungoogled_switches.cc
 @@ -0,0 +1,18 @@
-+// Copyright (c) 2020 The ungoogled-chromium Authors. All rights reserved.
++// Copyright (c) 2020 The bora-browser Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
@@ -41,7 +41,7 @@
 --- /dev/null
 +++ b/components/ungoogled/ungoogled_switches.h
 @@ -0,0 +1,20 @@
-+// Copyright (c) 2020 The ungoogled-chromium Authors. All rights reserved.
++// Copyright (c) 2020 The bora-browser Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +

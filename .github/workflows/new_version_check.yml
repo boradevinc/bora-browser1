@@ -10,7 +10,7 @@ on:
 jobs:
   check:
     # do not run in forks
-    if: github.repository == 'ungoogled-software/ungoogled-chromium'
+    if: github.repository == 'ungoogled-software/bora-browser'
     runs-on: ubuntu-latest
     steps:
       - name: Set maintainer groups

@@ -2,11 +2,11 @@
 +++ b/chrome/browser/ungoogled_flag_entries.h
 @@ -136,4 +136,8 @@
       "Spoof WebGL Info",
-      "Return generic values for WebGLDebugRendererInfo to remove a potential data leak while preventing potential website breakage. ungoogled-chromium flag.",
+      "Return generic values for WebGLDebugRendererInfo to remove a potential data leak while preventing potential website breakage. bora-browser flag.",
       kOsAll, FEATURE_WITH_PARAMS_VALUE_TYPE(blink::features::kSpoofWebGLInfo, kSpoofWebGLChoices, "SpoofWebGLInfo")},
 +    {"increase-incognito-storage-quota",
 +     "Increases the storage quota for Incognito and Guest profiles",
-+     "Makes Incognito and Guest profiles compute the storage quota with the same algorithm that regular profiles use. This makes it harder for websites to detect Incognito mode, but may allow sites to induce heavy memory pressure. ungoogled-chromium flag.",
++     "Makes Incognito and Guest profiles compute the storage quota with the same algorithm that regular profiles use. This makes it harder for websites to detect Incognito mode, but may allow sites to induce heavy memory pressure. bora-browser flag.",
 +     kOsAll, FEATURE_VALUE_TYPE(storage::features::kIncreaseIncognitoStorageQuota)},
  #endif  // CHROME_BROWSER_UNGOOGLED_FLAG_ENTRIES_H_
 --- a/storage/browser/quota/quota_features.cc

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2019 The ungoogled-chromium Authors. All rights reserved.
+# Copyright (c) 2019 The bora-browser Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 """
-Utility to ease the updating of platform patches against ungoogled-chromium's patches
+Utility to ease the updating of platform patches against bora-browser's patches
 """
 
 import argparse
@@ -162,7 +162,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command',
                         choices=('merge', 'unmerge'),
-                        help='Merge or unmerge ungoogled-chromium patches with platform patches')
+                        help='Merge or unmerge bora-browser patches with platform patches')
     parser.add_argument('platform_patches',
                         type=Path,
                         help='The path to the platform patches in GNU Quilt format to merge into')

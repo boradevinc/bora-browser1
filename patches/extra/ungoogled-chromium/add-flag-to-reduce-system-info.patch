@@ -2,11 +2,11 @@
 +++ b/chrome/browser/ungoogled_flag_entries.h
 @@ -120,4 +120,8 @@
       "Minimal Referrers",
-      "Removes all cross-origin referrers and strips same-origin referrers down to the origin. Has lower precedence than remove-cross-origin-referrers. ungoogled-chromium flag.",
+      "Removes all cross-origin referrers and strips same-origin referrers down to the origin. Has lower precedence than remove-cross-origin-referrers. bora-browser flag.",
       kOsAll, FEATURE_VALUE_TYPE(network::features::kMinimalReferrers)},
 +    {"reduced-system-info",
 +     "Reduced System Info",
-+     "Reduces the amount of system information obatainable through headers and javascript, also causes hardwareConcurrency to respond with two cores. ungoogled-chromium flag.",
++     "Reduces the amount of system information obatainable through headers and javascript, also causes hardwareConcurrency to respond with two cores. bora-browser flag.",
 +     kOsAll, FEATURE_VALUE_TYPE(blink::features::kReducedSystemInfo)},
  #endif  // CHROME_BROWSER_UNGOOGLED_FLAG_ENTRIES_H_
 --- a/components/embedder_support/user_agent_utils.cc

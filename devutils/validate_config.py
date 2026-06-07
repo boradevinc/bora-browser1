@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
 
-# Copyright (c) 2019 The ungoogled-chromium Authors. All rights reserved.
+# Copyright (c) 2019 The bora-browser Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
-"""Run sanity checking algorithms over ungoogled-chromium's config files
+"""Run sanity checking algorithms over bora-browser's config files
 
-NOTE: This script is hardcoded to run over ungoogled-chromium's config files only.
+NOTE: This script is hardcoded to run over bora-browser's config files only.
 To check other files, use the other scripts imported by this script.
 
 It checks the following:

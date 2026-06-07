@@ -2,11 +2,11 @@
 +++ b/chrome/browser/ungoogled_flag_entries.h
 @@ -140,4 +140,8 @@
       "Increases the storage quota for Incognito and Guest profiles",
-      "Makes Incognito and Guest profiles compute the storage quota with the same algorithm that regular profiles use. This makes it harder for websites to detect Incognito mode, but may allow sites to induce heavy memory pressure. ungoogled-chromium flag.",
+      "Makes Incognito and Guest profiles compute the storage quota with the same algorithm that regular profiles use. This makes it harder for websites to detect Incognito mode, but may allow sites to induce heavy memory pressure. bora-browser flag.",
       kOsAll, FEATURE_VALUE_TYPE(storage::features::kIncreaseIncognitoStorageQuota)},
 +    {"disabling-javascript-optimization-disables-jit",
 +     "Disabling JavaScript optimization disables JIT",
-+     "If enabled, disables JIT too if the \"JavaScript optimization\" setting is turned off. ungoogled-chromium flag.",
++     "If enabled, disables JIT too if the \"JavaScript optimization\" setting is turned off. bora-browser flag.",
 +     kOsAll, SINGLE_VALUE_TYPE("disabling-javascript-optimization-disables-jit")},
  #endif  // CHROME_BROWSER_UNGOOGLED_FLAG_ENTRIES_H_
 --- a/v8/gni/v8.gni

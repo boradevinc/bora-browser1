@@ -1,18 +1,18 @@
 name: Bug Report
-description: Report a bug building or running ungoogled-chromium
+description: Report a bug building or running bora-browser
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        Before submitting this issue, please confirm if you should submit it to a [platform-specific issue tracker instead](https://github.com/ungoogled-software/ungoogled-chromium/blob/master/SUPPORT.md#platform-specific-support)
+        Before submitting this issue, please confirm if you should submit it to a [platform-specific issue tracker instead](https://github.com/ungoogled-software/bora-browser/blob/master/SUPPORT.md#platform-specific-support)
 
-        Otherwise, your issue may not be noticed. In addition, please read through the [SUPPORT.md](https://github.com/ungoogled-software/ungoogled-chromium/blob/master/SUPPORT.md) first
+        Otherwise, your issue may not be noticed. In addition, please read through the [SUPPORT.md](https://github.com/ungoogled-software/bora-browser/blob/master/SUPPORT.md) first
   - type: dropdown
     id: os
     attributes:
       label: OS/Platform
-      description: OS/Platform you are running ungoogled-chromium on
+      description: OS/Platform you are running bora-browser on
       options:
           - Android
           - Arch Linux
@@ -32,12 +32,12 @@ body:
     id: install
     attributes:
       label: Installed
-      description: How was ungoogled-chromium installed on your OS/Platform
+      description: How was bora-browser installed on your OS/Platform
       options:
           - Compiled from source
           - OS/Platform's package manager
           - Flatpak
-          - https://ungoogled-software.github.io/ungoogled-chromium-binaries/
+          - https://ungoogled-software.github.io/bora-browser-binaries/
           - Other (please use 'Additional context' field below to mention how exactly)
     validations:
         required: true
@@ -45,7 +45,7 @@ body:
     id: version
     attributes:
       label: Version
-      description: ungoogled-chromium version. Could be copied from chrome://settings/help
+      description: bora-browser version. Could be copied from chrome://settings/help
     validations:
       required: true
   - type: checkboxes
@@ -54,7 +54,7 @@ body:
       options:
         - label: I have tried reproducing this issue in Chrome and it could not be reproduced there
         - label: I have tried reproducing this issue in vanilla Chromium and it could not be reproduced there
-        - label: I have tried reproducing this issue in ungoogled-chromium with a new and empty profile using `--user-data-dir` command line argument and it could not be reproduced there
+        - label: I have tried reproducing this issue in bora-browser with a new and empty profile using `--user-data-dir` command line argument and it could not be reproduced there
   - type: input
     id: description
     attributes:

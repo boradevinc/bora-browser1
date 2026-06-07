@@ -1,10 +1,10 @@
 # Design
 
-This document contains a high-level technical description of ungoogled-chromium and its components.
+This document contains a high-level technical description of bora-browser and its components.
 
 ## Overview
 
-ungoogled-chromium consists of the following major components:
+bora-browser consists of the following major components:
 
 * [Configuration](#configuration)
     * [Configuration files](#configuration-files)
@@ -32,7 +32,7 @@ Configuration files (or config files) are files that store build configuration a
 
 List of configuration files:
 
-* `chromium_version.txt` - The Chromium version used by ungoogled-chromium
+* `chromium_version.txt` - The Chromium version used by bora-browser
 * `revision.txt` - The revision of the changes on top of the given Chromium version.
 * `pruning.list` - [See the Source File Processors section](#source-file-processors)
 * `domain_regex.list` - [See the Source File Processors section](#source-file-processors)
@@ -50,7 +50,7 @@ The list of files to remove are determined by the config file `pruning.list`. Th
 
 **Domain Substitution**: Replaces Google and several other web domain names in the Chromium source code with non-existent alternatives ending in `qjz9zk`. These changes are mainly used as a backup measure to detect potentially unpatched requests to Google. Note that domain substitution is a crude process, and *may not be easily undone*.
 
-With a few patches from ungoogled-chromium, any requests with these domain names sent via `net::URLRequest` in the Chromium code are blocked and notify the user via a info bar.
+With a few patches from bora-browser, any requests with these domain names sent via `net::URLRequest` in the Chromium code are blocked and notify the user via a info bar.
 
 Similar to binary pruning, the list of files to modify are listed in `domain_substitution.list`; it is also updated with `devutils/update_lists.py`.
 
@@ -60,14 +60,14 @@ The regular expressions to use are listed in `domain_regex.list`; the search and
 
 ### Patches
 
-All of ungoogled-chromium's patches for the Chromium source code are located in `patches/`. This directory conforms to the default GNU Quilt format. That is:
+All of bora-browser's patches for the Chromium source code are located in `patches/`. This directory conforms to the default GNU Quilt format. That is:
 
 * All patches must reside inside `patches/`
 * There is a `patches/series` text file that defines the order to apply all the patches. These patches are listed as a relative path from the `patches` directory.
     * Lines starting with the pound symbol (`#`) are ignored
     * For lines with patch paths: If there is a space followed by a pound symbol, the text after the patch path will be ignored.
 
-All patch files in ungoogled-chromium must satisfy these formatting requirements:
+All patch files in bora-browser must satisfy these formatting requirements:
 
 * Patch filenames must end with the extension `.patch`
 * The content must be in [unified format](https://en.wikipedia.org/wiki/Diff_utility#Unified_format).
@@ -98,13 +98,13 @@ Within each category, patches are grouped by the following:
     * Patches are from the `patchview` branch of Iridium's Git repository. [Git webview of the patchview branch](https://git.iridiumbrowser.de/cgit.cgi/iridium-browser/?h=patchview)
 * `opensuse/` - Patches from openSUSE's Chromium
 * `ubuntu/` -  Patches from Ubuntu's Chromium
-* `ungoogled-chromium/` - Patches by ungoogled-chromium developers
+* `bora-browser/` - Patches by bora-browser developers
 
 ## Packaging
 
-Packaging is the process of downloading, building, and producing a distributable package of ungoogled-chromium.
+Packaging is the process of downloading, building, and producing a distributable package of bora-browser.
 
-Packaging files use the code from this repository to build ungoogled-chromium. Each platform and configuration has an associated packaging repository under the [ungoogled-software](https://github.com/ungoogled-software) organization. For more information about each packaging repository, see the [building documentation](building.md).
+Packaging files use the code from this repository to build bora-browser. Each platform and configuration has an associated packaging repository under the [ungoogled-software](https://github.com/ungoogled-software) organization. For more information about each packaging repository, see the [building documentation](building.md).
 
 Packaging generally consists of the major steps:
 

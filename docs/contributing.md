@@ -1,8 +1,8 @@
 # Contributing
 
-This document contains our criteria and guidelines for contributing to ungoogled-chromium.
+This document contains our criteria and guidelines for contributing to bora-browser.
 
-If you have **small contributions that don't fit our criteria**, consider adding them to [ungoogled-software/contrib](https://github.com/ungoogled-software/contrib) or [our Wiki](https://github.com/ungoogled-software/ungoogled-chromium-wiki) instead.
+If you have **small contributions that don't fit our criteria**, consider adding them to [ungoogled-software/contrib](https://github.com/ungoogled-software/contrib) or [our Wiki](https://github.com/ungoogled-software/bora-browser-wiki) instead.
 
 If you are a developer of an **officially-supported platform**, be sure to check out the [Platform Repository Standards and Guidelines](repo_management.md).
 
@@ -14,7 +14,7 @@ List of contents:
 
 ### How to help
 
-Generally, ungoogled-chromium needs contributors to help:
+Generally, bora-browser needs contributors to help:
 
 * Keep up-to-date with the latest stable Chromium, and any problematic changes in the new version that needs modification.
 * Help with issues marked with the `help wanted` tag (usually either questions for other users, or request for help from other developers)
@@ -49,4 +49,4 @@ Guidelines:
     * Settings are usually added via a command-line flag and `chrome://flags` entries. See [the relevant section in docs/developing.md](developing.md#adding-command-line-flags-and-chromeflags-options) for more information.
     * Unless there are significant benefits, adding the setting to `chrome://settings` is *not recommended* due to the additional maintenance required (caused by the infrastructure that backs preferences).
 
-**NOTE**: In the event that the codebase changes significantly for a non-essential patch (i.e. a patch that does not contribute to the main objectives of ungoogled-chromium), it will be removed until someone updates it.
+**NOTE**: In the event that the codebase changes significantly for a non-essential patch (i.e. a patch that does not contribute to the main objectives of bora-browser), it will be removed until someone updates it.

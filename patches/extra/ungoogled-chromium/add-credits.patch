@@ -8,11 +8,11 @@
 +    the <a href="{{opensource_link}}">repository</a>.
  </div>
 --- /dev/null
-+++ b/third_party/ungoogled-chromium/LICENSE
++++ b/third_party/bora-browser/LICENSE
 @@ -0,0 +1,29 @@
 +BSD 3-Clause License
 +
-+Copyright (c) 2015-2025, The ungoogled-chromium Authors
++Copyright (c) 2015-2025, The bora-browser Authors
 +All rights reserved.
 +
 +Redistribution and use in source and binary forms, with or without
@@ -46,11 +46,11 @@
  }
  
 +_UGC_LICENSE_METADATA = {
-+    'Name': 'ungoogled-chromium',
-+    'URL': 'https://github.com/ungoogled-software/ungoogled-chromium',
++    'Name': 'bora-browser',
++    'URL': 'https://github.com/ungoogled-software/bora-browser',
 +    'License': 'BSD-3-Clause',
 +    'Shipped': 'yes',
-+    'License File': [os.path.join(_REPOSITORY_ROOT, 'third_party', 'ungoogled-chromium', 'LICENSE')],
++    'License File': [os.path.join(_REPOSITORY_ROOT, 'third_party', 'bora-browser', 'LICENSE')],
 +}
 +
  # Paths from the root of the tree to directories to skip.
@@ -71,8 +71,8 @@
    reciprocal_contents = EvaluateTemplate(reciprocal_template, {
 -      'opensource_project': 'Chromium',
 -      'opensource_link': 'https://source.chromium.org/chromium'
-+      'opensource_project': 'ungoogled-chromium',
-+      'opensource_link': 'https://github.com/ungoogled-software/ungoogled-chromium'
++      'opensource_project': 'bora-browser',
++      'opensource_link': 'https://github.com/ungoogled-software/bora-browser'
    },
                                           escape=False)
  

@@ -1,7 +1,7 @@
 # List of flags and switches
 
-This is an exhaustive list of command-line switches and flags introduced by ungoogled-chromium.
-Each switch has a corresponding entry on the `chrome://flags` page which can be filtered by searching for `ungoogled-chromium`.
+This is an exhaustive list of command-line switches and flags introduced by bora-browser.
+Each switch has a corresponding entry on the `chrome://flags` page which can be filtered by searching for `bora-browser`.
 
 If a switch requires a value, you must specify it with an `=` sign; e.g. flag `--foo` with value `bar` should be written as `--foo=bar`.
 
@@ -12,15 +12,15 @@ If a switch requires a value, you must specify it with an `=` sign; e.g. flag `-
   <code>Switch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code> | Description
   -- | --
   `--disable-beforeunload` | Disables JavaScript dialog boxes triggered by `beforeunload`
-  `--disable-grease-tls` | Disables GREASE for TLS. Combined with `--http-accept-header` allows browser to look more like a tor-browser. See https://github.com/ungoogled-software/ungoogled-chromium/issues/783 for more details.
+  `--disable-grease-tls` | Disables GREASE for TLS. Combined with `--http-accept-header` allows browser to look more like a tor-browser. See https://github.com/ungoogled-software/bora-browser/issues/783 for more details.
   `--disable-search-engine-collection` | Disable automatic search engine scraping from webpages.
   `--extension-mime-request-handling` | Change how extension MIME types (CRX and user scripts) are handled. Acceptable values are `download-as-regular-file` or `always-prompt-for-install`. Leave unset to use normal behavior.
   `--fingerprinting-canvas-image-data-noise` | (Added flag to Bromite feature) Implements fingerprinting deception for Canvas image data retrieved via JS APIs. In the data, at most 10 pixels are slightly modified.
   `--fingerprinting-canvas-measuretext-noise` | (Added flag to Bromite feature) Scale the output values of Canvas::measureText() with a randomly selected factor in the range -0.0003% to 0.0003%, which are recomputed on every document initialization.
   `--fingerprinting-client-rects-noise` | (Added flag to Bromite feature) Implements fingerprinting deception of JS APIs `getClientRects()` and `getBoundingClientRect()` by scaling their output values with a random factor in the range -0.0003% to 0.0003%, which are recomputed for every document instantiation.
-  `--force-punycode-hostnames` | Convert all Internationalized Domain Names to punycode (ASCII representation of Unicode). See https://github.com/ungoogled-software/ungoogled-chromium/issues/370 for more details.
+  `--force-punycode-hostnames` | Convert all Internationalized Domain Names to punycode (ASCII representation of Unicode). See https://github.com/ungoogled-software/bora-browser/issues/370 for more details.
   `--hide-crashed-bubble` | Hides the bubble box with the message "Restore Pages? Chromium didn't shut down correctly." that shows on startup after the browser did not exit cleanly.
-  `--http-accept-header` | Changes the default value of the `Accept` HTTP header sent with HTTP requests. Combined with `--disable-grease-tls` allows browser to look more like a tor-browser. See https://github.com/ungoogled-software/ungoogled-chromium/issues/783 for more details.
+  `--http-accept-header` | Changes the default value of the `Accept` HTTP header sent with HTTP requests. Combined with `--disable-grease-tls` allows browser to look more like a tor-browser. See https://github.com/ungoogled-software/bora-browser/issues/783 for more details.
   `--keep-old-history` | Disables deletion of local browser history after 90 days
   `--max-connections-per-host` | (from Bromite) Configure the maximum allowed connections per host. Valid values are `6` and `15`
   `--omnibox-autocomplete-filtering` | Restrict omnibox autocomplete results to a combination of search suggestions (if enabled), bookmarks, and internal chrome pages. Accepts `search`, `search-bookmarks`, `search-chrome`, and `search-bookmarks-chrome`.
@@ -77,13 +77,13 @@ These are also available on the `chrome://flags` page.
   Feature | Description
   -- | --
   `ClearDataOnExit` | Clears all browsing data on exit.
-  `DisableLinkDrag` | Prevents dragging of links and selected text. Allows selecting text from a middle of a link. Also allows starting selection without first clearing the existing one. This behaviour is similar to the one from older Opera. See https://github.com/ungoogled-software/ungoogled-chromium/pull/2080 and https://github.com/ungoogled-software/ungoogled-chromium/discussions/2055 for more information.
+  `DisableLinkDrag` | Prevents dragging of links and selected text. Allows selecting text from a middle of a link. Also allows starting selection without first clearing the existing one. This behaviour is similar to the one from older Opera. See https://github.com/ungoogled-software/bora-browser/pull/2080 and https://github.com/ungoogled-software/bora-browser/discussions/2055 for more information.
   `DisableQRGenerator` | Disables the QR generator for sharing page links.
 
 
 ## Flags for existing switches
 
-Chromium contains switches that do no have corresponding entries in `chrome://flags`. For convenience, ungoogled-chromium has created entries for some of the commonly-used switches.
+Chromium contains switches that do no have corresponding entries in `chrome://flags`. For convenience, bora-browser has created entries for some of the commonly-used switches.
 
 - ### Available on all platforms
   <code>Switch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code> | Description

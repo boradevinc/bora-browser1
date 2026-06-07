@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Copyright (c) 2019 The ungoogled-chromium Authors. All rights reserved.
+# Copyright (c) 2019 The bora-browser Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 """
@@ -35,7 +35,7 @@ _ENCODING = 'UTF-8'
 # pathlib.Path.match() paths to include in binary pruning
 PRUNING_INCLUDE_PATTERNS = [
     'components/domain_reliability/baked_in_configs/*',
-    # Removals for patches/core/ungoogled-chromium/remove-unused-preferences-fields.patch
+    # Removals for patches/core/bora-browser/remove-unused-preferences-fields.patch
     'components/safe_browsing/core/common/safe_browsing_prefs.cc',
     'components/safe_browsing/core/common/safe_browsing_prefs.h',
     'components/signin/public/base/signin_pref_names.cc',

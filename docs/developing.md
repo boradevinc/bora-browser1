@@ -1,8 +1,8 @@
 # Development notes and procedures
 
-This document contains an assortment of information for those who want to develop ungoogled-chromium.
+This document contains an assortment of information for those who want to develop bora-browser.
 
-Information targeted towards developers *and* other users live in [the Wiki](https://ungoogled-software.github.io/ungoogled-chromium-wiki/).
+Information targeted towards developers *and* other users live in [the Wiki](https://ungoogled-software.github.io/bora-browser-wiki/).
 
 Contents:
 
@@ -20,7 +20,7 @@ Larger feature changes or hotfixes must be done in a separate branch. Once they 
 
 See `docs/how_to_add_your_feature_flag.md` in the Chromium source tree for the steps needed. Note that updating `tools/metrics/histograms/enums.xml` is not required.
 
-For new flags, first add a constant to `third_party/ungoogled/ungoogled_switches.cc` (by modifying patch `resources/patches/ungoogled-chromium/add-third-party-ungoogled.patch`). Then, use this constant in the steps outlined above.
+For new flags, first add a constant to `third_party/ungoogled/ungoogled_switches.cc` (by modifying patch `resources/patches/bora-browser/add-third-party-ungoogled.patch`). Then, use this constant in the steps outlined above.
 
 ## Workflow of updating to a new Chromium version
 
@@ -76,7 +76,7 @@ The resulting source tree in `build/src` *will not* have binaries pruned or doma
     3. Refresh the patch: `quilt refresh`
     4. Go back to Step 3.
 5. Run `quilt pop -a`
-6. Go back to ungoogled-chromium repo: `cd ../..`
+6. Go back to bora-browser repo: `cd ../..`
 7. Run `devutils/validate_config.py`. If any warnings are printed, address them; otherwise, continue to Step 8.
 8. Run `devutils/validate_patches.py -l build/src`. If errors occur, go back to Step 3.
 
@@ -95,5 +95,5 @@ If domain substitution is applied, then the steps for the initial update will no
 
 ### Next steps
 
-* Submit a Pull Request of these changes to the ungoogled-chromium repo.
+* Submit a Pull Request of these changes to the bora-browser repo.
 * Once the PR is merged, update the repositories of each platform repository that you are maintaining under the `ungoogled-software` organization.

@@ -2,11 +2,11 @@
 +++ b/chrome/browser/ungoogled_flag_entries.h
 @@ -84,4 +84,8 @@
       "Hide tab close buttons",
-      "Hides the close buttons on tabs. ungoogled-chromium flag.",
+      "Hides the close buttons on tabs. bora-browser flag.",
       kOsDesktop, SINGLE_VALUE_TYPE("hide-tab-close-buttons")},
 +    {"disable-grease-tls",
 +     "Disable GREASE for TLS",
-+     "Turn off GREASE (Generate Random Extensions And Sustain Extensibility) for TLS connections. ungoogled-chromium flag.",
++     "Turn off GREASE (Generate Random Extensions And Sustain Extensibility) for TLS connections. bora-browser flag.",
 +     kOsAll, SINGLE_VALUE_TYPE("disable-grease-tls")},
  #endif  // CHROME_BROWSER_UNGOOGLED_FLAG_ENTRIES_H_
 --- a/net/socket/ssl_client_socket_impl.cc

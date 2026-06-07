@@ -17,7 +17,7 @@
 --- /dev/null
 +++ b/chrome/browser/bromite_flag_choices.h
 @@ -0,0 +1,7 @@
-+// Copyright (c) 2020 The ungoogled-chromium Authors. All rights reserved.
++// Copyright (c) 2020 The bora-browser Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
@@ -27,7 +27,7 @@
 --- /dev/null
 +++ b/chrome/browser/bromite_flag_entries.h
 @@ -0,0 +1,7 @@
-+// Copyright (c) 2020 The ungoogled-chromium Authors. All rights reserved.
++// Copyright (c) 2020 The bora-browser Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
@@ -37,7 +37,7 @@
 --- /dev/null
 +++ b/chrome/browser/ungoogled_flag_choices.h
 @@ -0,0 +1,7 @@
-+// Copyright (c) 2020 The ungoogled-chromium Authors. All rights reserved.
++// Copyright (c) 2020 The bora-browser Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
@@ -47,7 +47,7 @@
 --- /dev/null
 +++ b/chrome/browser/ungoogled_flag_entries.h
 @@ -0,0 +1,7 @@
-+// Copyright (c) 2020 The ungoogled-chromium Authors. All rights reserved.
++// Copyright (c) 2020 The bora-browser Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
@@ -57,7 +57,7 @@
 --- /dev/null
 +++ b/chrome/browser/ungoogled_platform_flag_choices.h
 @@ -0,0 +1,7 @@
-+// Copyright (c) 2020 The ungoogled-chromium Authors. All rights reserved.
++// Copyright (c) 2020 The bora-browser Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
@@ -67,7 +67,7 @@
 --- /dev/null
 +++ b/chrome/browser/ungoogled_platform_flag_entries.h
 @@ -0,0 +1,7 @@
-+// Copyright (c) 2020 The ungoogled-chromium Authors. All rights reserved.
++// Copyright (c) 2020 The bora-browser Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +

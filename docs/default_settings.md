@@ -1,6 +1,6 @@
 # Default Settings
 
-Vanilla Chromium settings are not often changed by ungoogled-chromium, however there are some exceptions.  
+Vanilla Chromium settings are not often changed by bora-browser, however there are some exceptions.  
 Below is a list of the documented changes to the default Chromium settings.
 
 Setting | New State | Location

@@ -49,11 +49,11 @@
 +++ b/chrome/browser/ungoogled_flag_entries.h
 @@ -132,4 +132,8 @@
       "Enforce Certificate Transparency",
-      "Enforce Certificate Transparency for certificates that sites present. This is enabled by default. ungoogled-chromium flag.",
+      "Enforce Certificate Transparency for certificates that sites present. This is enabled by default. bora-browser flag.",
       kOsAll, FEATURE_VALUE_TYPE(features::kCertificateTransparencyAskBeforeEnabling)},
 +    {"spoof-webgl-info",
 +     "Spoof WebGL Info",
-+     "Return generic values for WebGLDebugRendererInfo to remove a potential data leak while preventing potential website breakage. ungoogled-chromium flag.",
++     "Return generic values for WebGLDebugRendererInfo to remove a potential data leak while preventing potential website breakage. bora-browser flag.",
 +     kOsAll, FEATURE_WITH_PARAMS_VALUE_TYPE(blink::features::kSpoofWebGLInfo, kSpoofWebGLChoices, "SpoofWebGLInfo")},
  #endif  // CHROME_BROWSER_UNGOOGLED_FLAG_ENTRIES_H_
 --- a/third_party/blink/common/features.cc

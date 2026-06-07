@@ -2,11 +2,11 @@
 +++ b/chrome/browser/ungoogled_flag_entries.h
 @@ -124,4 +124,8 @@
       "Reduced System Info",
-      "Reduces the amount of system information obatainable through headers and javascript, also causes hardwareConcurrency to respond with two cores. ungoogled-chromium flag.",
+      "Reduces the amount of system information obatainable through headers and javascript, also causes hardwareConcurrency to respond with two cores. bora-browser flag.",
       kOsAll, FEATURE_VALUE_TYPE(blink::features::kReducedSystemInfo)},
 +    {"remove-client-hints",
 +     "Remove Client Hints",
-+     "Removes client hints (information sent to servers about your system, similar to a user agent). ungoogled-chromium flag.",
++     "Removes client hints (information sent to servers about your system, similar to a user agent). bora-browser flag.",
 +     kOsAll, FEATURE_VALUE_TYPE(blink::features::kRemoveClientHints)},
  #endif  // CHROME_BROWSER_UNGOOGLED_FLAG_ENTRIES_H_
 --- a/content/browser/client_hints/client_hints.cc
