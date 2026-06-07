@@ -92,6 +92,12 @@ jobs:
             ./utils/downloads.py unpack -i downloads.ini -c chromium_download_cache chromium_src
           fi
 
+      - name: Bora Browser Logosunu Yukle
+        run: |
+          curl -o chromium_src/chrome/app/theme/chromium/product_logo_128.png https://i.ibb.co/68vXwP9/Bora-Logo-Transparent.png
+          curl -o chromium_src/chrome/app/theme/chromium/product_logo_64.png https://i.ibb.co/68vXwP9/Bora-Logo-Transparent.png
+          curl -o chromium_src/chrome/app/theme/chromium/product_logo_32.png https://i.ibb.co/68vXwP9/Bora-Logo-Transparent.png
+
       - name: Validate patches
         run: ./devutils/validate_patches.py -l chromium_src -v
 
