@@ -1,22 +1,28 @@
-name: Create new empty release
+name: Build Bora Browser
 
 on:
   push:
     tags:
-      - '*'
+      - 'v*'
 
 jobs:
   build:
-    name: Create Release
+    name: Build Bora Browser
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+
+      - name: Build Process
+        run: |
+          echo "Bora Browser derleme islemi basliyor..."
+          mkdir -p build_output
+          echo "Bora Browser Build v1.0" > build_output/Bora_Browser_Info.txt
+          # Buraya daha sonra asil derleme komutlarini ekleyecegiz kanka
+          
       - name: Create Release
-        id: create_release
-        uses: actions/create-release@latest
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build_output/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
-          draft: false
-          prerelease: false
