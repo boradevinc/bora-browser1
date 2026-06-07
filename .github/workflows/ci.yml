@@ -92,6 +92,13 @@ jobs:
             ./utils/downloads.py unpack -i downloads.ini -c chromium_download_cache chromium_src
           fi
 
+      - name: Klasor Isimlerini Duzelt
+        run: |
+          mkdir -p patches/core/bora-browser
+          mkdir -p patches/extra/bora-browser
+          cp -r patches/core/ungoogled-chromium/* patches/core/bora-browser/ || true
+          cp -r patches/extra/ungoogled-chromium/* patches/extra/bora-browser/ || true
+
       - name: Bora Browser Logosunu Yukle
         run: |
           curl -o chromium_src/chrome/app/theme/chromium/product_logo_128.png https://i.ibb.co/68vXwP9/Bora-Logo-Transparent.png
